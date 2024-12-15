@@ -52,9 +52,9 @@ namespace CRUD_Filmy.Controllers
         public ActionResult Edit(int id, Film film)
         {
             Film filmd = filmy.FirstOrDefault(x => x.Id == id);
-            film.Name = film.Name;
-            film.Description = film.Description;
-            film.Price = film.Price;
+            filmd.Name = film.Name;
+            filmd.Description = film.Description;
+            filmd.Price = film.Price;
             return RedirectToAction(nameof(Index));
         }
 
